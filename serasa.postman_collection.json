@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "f5bebd3b-994c-49b8-b569-2db2ceacb9c3",
+		"name": "serasa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6693128",
+		"_collection_link": "https://grey-capsule-376939.postman.co/workspace/NOZ~d0088667-47a1-4a20-b60f-e3ad11d41e11/collection/6693128-f5bebd3b-994c-49b8-b569-2db2ceacb9c3?action=share&source=collection_link&creator=6693128"
+	},
+	"item": [
+		{
+			"name": "v1/produtores root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/produtores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/produtores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"produtores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/produtores/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/v1/produtores/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"produtores",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/produtores create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cpf_cnpj\": \"153.169.848-46\",\n    \"nome\": \"Fazenda Feliz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/produtores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"produtores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/produtores update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 11,\n    \"cpf_cnpj\": \"153.169.848-46\",\n    \"nome\": \"Fazenda Super Feliz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/produtores/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"produtores",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/propriedades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/v1/propriedades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"propriedades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/propriedades create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idProdutor\": 1,\n    \"nome\": \"Fazenda Boa Vista\",\n    \"cidade\": \"Campinas\",\n    \"estado\": \"SP\",\n    \"area_total\": 100.50,\n    \"area_agricultavel\": 80.25,\n    \"area_vegetacao\": 30.25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/v1/propriedades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"v1",
+						"propriedades"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
