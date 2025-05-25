@@ -1,4 +1,4 @@
-import { Controller, Get, Version, Post, Body, ValidationPipe } from '@nestjs/common';
+import { Controller, Get, Version, Post, Body, ValidationPipe, Logger } from '@nestjs/common';
 import { PropriedadeRuralService } from './propriedades.service';
 import { PropriedadeRural } from './entities/propriedade-rural.entity';
 import { CreatePropriedadeRuralDto } from './dto/create-propriedade-rural.dto';
@@ -8,9 +8,12 @@ import { validateAreas } from './utils/area-validator';
 export class PropriedadeRuralController {
   constructor(private readonly propriedadeRuralService: PropriedadeRuralService) {}
 
+  private readonly logger = new Logger(PropriedadeRuralController.name);  
+
   @Version('1')
   @Get()
   async findAll(): Promise<PropriedadeRural[]> {
+    this.logger.log('exemplo de log');    
     return this.propriedadeRuralService.findAll();
   }
 
