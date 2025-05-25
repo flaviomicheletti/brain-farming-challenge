@@ -1,0 +1,9 @@
+fastapi
+httpx
+uvicorn[standard]
+sqlmodel
+psycopg2-binary
+loguru
+pytest
+python-dotenv
+pydantic-settings
