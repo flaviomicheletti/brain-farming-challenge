@@ -36,35 +36,47 @@ CREATE TABLE culturas_por_safra (
 );
 
 
+-- VIEWS ESSENCIAIS PARA O DASHBOARD PRINCIPAL --
+
 --
+-- 1. View para estatísticas gerais (totais)
 --
+CREATE OR REPLACE VIEW dashboard_totais AS
+SELECT 
+    COUNT(*) AS total_propriedades,
+    SUM(area_total) AS area_total_hectares,
+    SUM(area_agricultavel) AS area_agricultavel,
+    SUM(area_vegetacao) AS area_vegetacao
+FROM propriedades_rurais;
+
 --
-CREATE VIEW estatisticas_por_estado AS
+-- 2. View para distribuição por estado (gráfico de pizza)
+--
+CREATE OR REPLACE VIEW dashboard_por_estado AS
 SELECT 
     estado,
     COUNT(*) as total_propriedades,
-    SUM(area_total) as area_total,
-    SUM(area_agricultavel) as area_agricultavel,
-    SUM(area_vegetacao) as area_vegetacao
+    SUM(area_total) as area_total
 FROM propriedades_rurais
-GROUP BY estado;
+GROUP BY estado
+ORDER BY area_total DESC;
 
 --
+-- 3. View para culturas plantadas (gráfico de pizza)
 --
---
-CREATE VIEW culturas_plantadas AS
+CREATE OR REPLACE VIEW dashboard_culturas AS
 SELECT 
-    c.nome as cultura,
-    COUNT(*) as total_plantios,
-    SUM(cps.area_plantada) as area_total
+    c.nome AS cultura,
+    SUM(cps.area_plantada) AS area_total
 FROM culturas_por_safra cps
 JOIN culturas c ON cps.id_cultura = c.id
-GROUP BY c.nome;
+GROUP BY c.nome
+ORDER BY area_total DESC;
 
 --
+-- 4. View para uso do solo (gráfico de pizza)
 --
---
-CREATE VIEW uso_do_solo AS
+CREATE OR REPLACE VIEW dashboard_uso_solo AS
 SELECT 
     'Agricultável' as tipo,
     SUM(area_agricultavel) as area
