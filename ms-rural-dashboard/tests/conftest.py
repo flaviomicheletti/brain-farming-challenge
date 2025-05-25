@@ -1,7 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
 from sqlmodel import Session, SQLModel, create_engine
-from sqlalchemy.pool import StaticPool # Para SQLite em memória, se for o caso
 from typing import Generator
 from loguru import logger
 

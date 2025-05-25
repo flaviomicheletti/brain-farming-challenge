@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from app.core.config import settings
-from loguru import logger # Importe diretamente o logger configurado
+from loguru import logger
 
 router = APIRouter()
 

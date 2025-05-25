@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, ConfigDict # ConfigDict já está importado
+from pydantic import BaseModel, Field, ConfigDict
 from typing import List, Optional
 from .models import (
     DashboardTotaisDataRow,
@@ -6,7 +6,6 @@ from .models import (
     DashboardCulturasDataRow,
     DashboardUsoSoloDataRow
 )
-# from datetime import datetime, timezone # Se for adicionar timestamp
 
 class DashboardConsolidatedData(BaseModel):
     """
@@ -28,12 +27,6 @@ class DashboardConsolidatedData(BaseModel):
         default_factory=list, description="Distribuição da área total entre agricultável e vegetação."
     )
     
-    # Exemplo de como adicionar um timestamp da consulta
-    # timestamp_consulta: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
-
-    # --- CORREÇÃO APLICADA AQUI ---
-    # Remova a classe interna "Config" e atribua diretamente a model_config
-    # usando ConfigDict.
     model_config = ConfigDict(
         json_schema_extra={
             "examples": [
@@ -62,4 +55,3 @@ class DashboardConsolidatedData(BaseModel):
             ]
         }
     )
-    # --- FIM DA CORREÇÃO ---

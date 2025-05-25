@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from app.core.config import settings # Para verificar os valores esperados
+from app.core.config import settings
 
 # A fixture 'client' é injetada automaticamente pelo Pytest a partir do conftest.py
 def test_get_root_success(client: TestClient):

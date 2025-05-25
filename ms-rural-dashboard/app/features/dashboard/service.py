@@ -9,7 +9,7 @@ from .models import (
 )
 from .schemas import DashboardConsolidatedData
 
-# Nomes reais das suas views no PostgreSQL
+# Nomes reais das views no PostgreSQL
 NOME_VIEW_TOTAIS = "dashboard_totais"
 NOME_VIEW_POR_ESTADO = "dashboard_por_estado"
 NOME_VIEW_CULTURAS = "dashboard_culturas"

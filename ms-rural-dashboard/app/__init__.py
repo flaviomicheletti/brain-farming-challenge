@@ -24,6 +24,3 @@ logger.add(
 # )
 
 logger.info("Logger configurado.")
-
-# Para facilitar importações, pode-se expor o logger aqui
-# from loguru import logger # Já importado acima
