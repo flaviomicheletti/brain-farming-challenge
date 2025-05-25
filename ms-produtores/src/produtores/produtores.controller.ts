@@ -9,6 +9,7 @@ import {
   ParseIntPipe,
   HttpException,
   HttpStatus,
+  Logger
 } from '@nestjs/common';
 import { ProdutoresService } from './produtores.service';
 import { Produtor } from './entities/produtor.entity';
@@ -20,9 +21,12 @@ import { UpdateProdutorDto } from './dto/update-produtor.dto';
 export class ProdutoresController {
   constructor(private readonly produtoresService: ProdutoresService) {}
 
+  private readonly logger = new Logger(ProdutoresController.name);
+
   @Version('1')
   @Get()
   async findAll(): Promise<Produtor[]> {
+    this.logger.log('exemplo de log');
     return this.produtoresService.findAll();
   }
 

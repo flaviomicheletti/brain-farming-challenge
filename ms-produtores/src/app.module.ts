@@ -4,8 +4,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProdutoresModule } from './produtores/produtores.module';
 
+import { WinstonModule } from 'nest-winston';
+import { winstonLoggerOptions } from './logger/winston.logger';
+
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { RouteLoggingInterceptor } from './interceptors/route-logging.interceptor';
+
 @Module({
   imports: [
+    WinstonModule.forRoot(winstonLoggerOptions),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -19,8 +26,12 @@ import { ProdutoresModule } from './produtores/produtores.module';
     ProdutoresModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: RouteLoggingInterceptor,
+    },
+  ],
 })
 export class AppModule {}
-
-
