@@ -6,12 +6,14 @@ Meu deadline era dia 26 de Maio.
 
 Eu me candidatei para vaga de Backend, então fiz 3 microsserviçoes:
 
-- ms-produtores [Nodejs - Nestjs]
-- ms-propriedades-rurais [Nodejs - Nestjs]
-- ms-rural-dashboard [Python - FastAPI]
+| microsserviçoes        | Tecnologia       |
+|------------------------|------------------|
+| ms-produtores          | Nodejs - Nestjs  |
+| ms-propriedades-rurais | Nodejs - Nestjs  |
+| ms-rural-dashboard     | Python - FastAPI |
 
 
-# Docs
+### Docs
 
 - [banco-de-dados](database/readme.md)
 - [ms-produtores](ms-produtores/readme.md)
