@@ -1,9 +1,8 @@
 # Mircosserviço de Produtores
 
-![Image](https://github.com/user-attachments/assets/5f009c7b-c2ef-4684-852f-eec6f9ee8b81)
-
 Este é o mircosserviço responsável pelos produtores.
 
+![endpoints-produtores](https://github.com/user-attachments/assets/3629100b-ce67-4ada-803a-bcaa69a2f9c7)
 
 ```bash
 npm install

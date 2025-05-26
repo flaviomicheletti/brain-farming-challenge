@@ -1,8 +1,9 @@
 # Mircosserviço de Propriedades Rurais
 
-![Image](https://github.com/user-attachments/assets/234165db-9f29-4bab-85f6-39e457e8f39e)
-
 Este é o mircosserviço responsável pelas Propriedades Rurais.
+
+![endpoints-propriedades](https://github.com/user-attachments/assets/234165db-9f29-4bab-85f6-39e457e8f39e)
+
 
 ```bash
 npm install

@@ -2,7 +2,7 @@
 
 Este é o Microsserviço responsável pelas informações do Dashboard.
 
-![Image](https://github.com/user-attachments/assets/9acc524e-5f7a-481e-a065-81ed3bcf6d8b)
+![endpoits-dashboard](https://github.com/user-attachments/assets/f231fede-10b7-4022-aaf8-9802aecddddb)
 
 
 ## Instalação
