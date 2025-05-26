@@ -68,6 +68,6 @@ Importe a collection abaixo.
 
 [serasa.postman_collection](serasa.postman_collection.json)
 
-
+![collection](https://github.com/user-attachments/assets/790a9115-6d4c-4b1a-81b4-061173d8e388)
 
     
