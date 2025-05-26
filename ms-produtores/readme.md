@@ -6,11 +6,7 @@ Este é o mircosserviço responsável pelos produtores.
 
 ![coverage](https://github.com/user-attachments/assets/1efc2e36-1afb-489c-8be8-aea4f942c390)
 
-```bash
-npm install
-npm install @nestjs/typeorm typeorm pg
-npm install class-validator class-transformer
-```
+
 
 ## Compile and run the project
 
