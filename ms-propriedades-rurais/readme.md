@@ -1,14 +1,8 @@
+# Mircosserviço de Propriedades Rurais
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+![Image](https://github.com/user-attachments/assets/234165db-9f29-4bab-85f6-39e457e8f39e)
 
-## Project setup
-
-
-nest new project-name
-
-nest generate module propriedades
-nest generate controller propriedades
-nest generate service propriedades
+Este é o mircosserviço responsável pelas Propriedades Rurais.
 
 ```bash
 npm install
@@ -44,8 +38,12 @@ $ npm run test:cov
 
 
 
-# Lint and autofix with eslint
+## Lint and autofix with eslint
+
+```bash
 $ npm run lint
 
 # Format with prettier
 $ npm run format
+```
+

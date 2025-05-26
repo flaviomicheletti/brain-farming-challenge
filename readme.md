@@ -1,6 +1,23 @@
-# Desafio  [Brain Agriculture - Teste Técnico v2]
+# Brain Agriculture Challenge - Teste Técnico v2
 
-Flávio Micheletti
+Eu sou Flávio Micheletti e fiz esse teste no final de semana de 24 e 25 de Maio.
+Meu deadline era dia 26 de Maio.
+
+Eu me candidatei para vaga de Backend, então fiz 3 microsserviçoes:
+
+- ms-produtores [Nodejs - Nestjs]
+- ms-propriedades-rurais [Nodejs - Nestjs]
+- ms-rural-dashboard [Python - FastAPI]
+
+
+# Docs
+
+- [banco-de-dados](database/readme.md)
+- [ms-produtores](ms-produtores/readme.md)
+- [ms-propriedades-rurais](ms-propriedades-rurais/readme.md)
+- [ms-rural-dashboard](ms-rural-dashboard/readme.md)
+
+**Caso queira dar uma olhada rápida no resultado** (ver a coisa funcionando), basta seguir este readme.
 
 
 ## Inicie o banco de dados
@@ -33,10 +50,13 @@ Se, por um acaso, precisar resetar o "volume":
     npm run start:dev
 
 
-## Execute o microsserviço "ms-dashboard" [Python]
+## Execute o microsserviço "ms-rural-dashboard" [Python]
 
+    cd ./ms-rural-dashboard
     python3 -m venv .venv && . .venv/bin/activate
-    python app.y
+    pip install -r requirements.txt
+    uvicorn app.main:app --reload
+
 
 
 ## Acesse via Postman
