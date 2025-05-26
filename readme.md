@@ -4,9 +4,9 @@ Eu sou Flávio Micheletti e fiz esse teste no final de semana de 24 e 25 de Maio
 
 Meu deadline era dia 26 de Maio.
 
-Eu me candidatei para vaga de Backend, então fiz 3 microsserviçoes:
+Eu me candidatei para vaga de Backend, então fiz 3 microsserviços:
 
-| microsserviçoes        | Tecnologia       |
+| microsserviços         | Tecnologia       |
 |------------------------|------------------|
 | ms-produtores          | Nodejs - Nestjs  |
 | ms-propriedades-rurais | Nodejs - Nestjs  |
